@@ -1,0 +1,200 @@
+@import url(reset.css);
+
+body {
+	width: 350px!important;
+	font: 12px/18px Arial, Sans-Serif;
+	color: #222;
+}
+p {
+	margin: 0 0 8px 0;
+}
+
+#header {
+	background-color: #61788f;
+	margin: 4px 0 0 0;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	line-height: 25px;
+	color: #FFF;
+	height: 25px;
+}
+#header h1 {
+	font-size: 11px;
+	margin: 0px 10px 0 10px;
+	padding-top: 2px;
+	float: left;
+}
+#header a {
+	float: right;
+	padding: 0 15px 0 20px;
+	background-color: rgba(256, 256, 256, 0.1);
+	color: #FFF;
+	text-decoration: none;
+	border-top-right-radius: 3px;
+	border-left: 1px solid #FFF;
+}
+#header a:hover {
+	background: #222;
+}
+
+#container {
+	background: #e6e6e6;
+	margin-top: 1px;
+	height: 196px;
+	padding: 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+input {
+	border: 1px solid #AAA;
+	border-radius: 5px;
+}
+input[type=text] {
+	padding: 6px;
+	width: 246px;
+}
+input[type=text]:focus {
+	border-color: #666;
+}
+input[type=submit] {
+	padding: 4px 0!important;
+	width: 67px!important;
+	background: #444;
+	color: #FFF;
+	border: none;
+}
+input[type=submit]:hover {
+	background: #61788f;
+	color: #FFF;
+}
+
+div#result {
+	margin: 10px 0 0 0;
+	overflow: auto;
+	height: 155px;
+}
+
+/* --- history box --- */
+.fadeBackground {
+	opacity: 0;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	margin: 4px 0 0 0;
+	border-radius: 3px;
+	z-index: -1;
+	-o-transition-property: opacity;
+
+	-o-transition-duration: 0.3s;
+}
+.fadeBackground.visible {
+	opacity: 1;
+}
+
+#history {
+	
+	position: absolute;
+	top: 15px;
+	left: 20px;
+	border-radius: 3px;
+	width: 310px!important;
+	height: 215px!important;
+
+	/*
+	opacity: 0;
+	-o-transition-property: opacity;
+	-o-transition-duration: 0.4s;
+	
+	-o-transform: scale(0, 0);
+	-o-transform: scale(1, 1);*/
+	
+	
+}
+
+/*#history.visible {
+	opacity: 1;
+	-o-transition-duration: 0.3s;
+}*/
+
+#historyScroll {
+	width: 310px;
+	height: 172px;
+	overflow: auto;
+	margin: 0!important;
+}
+
+#history a {
+	color: #FFF;
+	text-decoration: none;
+	display: block;
+	width: 230px;
+	padding: 5px 10px;
+	font-size: 11px;
+	float: left;
+	border-radius: 3px;
+}
+#history .delete {
+	color: #AAA;
+	padding: 5px 5px;
+	cursor: pointer;
+	display: block;
+	float: right;
+}
+#history a:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
+}
+#history ul {
+	
+}
+#history ul li {
+	float: left;
+}
+#history li:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 3px;
+}
+a#historyCloseButton {
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 290px;
+	color: #000;
+	border-radius: 5px;
+	border-bottom: 1px solid #AAA;
+	margin-bottom: 8px;
+	font-weight: bold;
+}
+a:hover#historyCloseButton {
+	background-color: #666;
+	color: #FFF;
+}
+
+
+
+/* --- error box --- */
+
+#error {
+	position: absolute;
+	
+	opacity: 0;
+	background: #AAA;
+	z-index: -2;
+	width: 0;
+	height: 0;
+
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 1000;
+	margin: 4px 0 0 0;
+	text-align: center;
+	border-radius: 3px;
+	
+	-o-transition-property: opacity;
+	-o-transition-duration: 0.3s;
+	-o-transition-delay: 0.2s;
+}
+#error.visible {
+	opacity: 1;
+	-o-transition-delay: 0s;
+}
+#error h2 { font-size: 18px; color: #FFF; margin: 100px 0 0 0; }
+
+.clear { clear: both; }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<meta charset=utf-8>
+	<script type="text/javascript" src="libs/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="libs/bybuss.js"></script>
+	<script type="text/javascript" src="libs/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="libs/jquery.jscrollpane.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/jquery.jscrollpane.css">
+	<title>ByBuss - busstider i Trondheim</title>
+</head>
+
+<body>
+	<div id="error">
+		<h2>Søkefeltet er tomt...</h2>
+	</div>
+	
+	<div class="fadeBackground">
+	<div id="history">
+		<p><a href="#" id="historyCloseButton">Lukk historieoversikten</a></p>
+		<div id="historyScroll">
+		<ul id="historyList">
+			<!-- List of local stored stuff -->
+			<script>showItemInLocalStorage();</script>
+		</ul>
+		</div>
+	</div>
+	</div>
+	
+	
+	<div id="header">
+		<h1>ByBuss - busstider i Trondheim</h1>
+		<a href="#" id="historyButton">Historie</a>
+	</div>
+	<div id="container">
+		<div id="search">
+			<input type="text" id="ask" value="">
+			<input type="submit" value="Send" onclick="handleQuestion($('#ask').val())">
+		</div>
+		<div id="result">For å søke skriver du inn "holdeplass til holdeplass", eller ved full søkestreng. Eks.<br>
+			- Gløs til Sentrum<br>
+			- Når går bussen fra Sentrum til Ila for å være der til kl 2000</div>
+	</div>
+</body>
+</html>
+<script>
+
+</script>
